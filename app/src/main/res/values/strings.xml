@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">AvaliacaoMusical</string>
+    <string name="cadastro_de_artista">Cadastro de Artista</string>
+    <string name="nome">Nome:</string>
+    <string name="vazio" />
+    <string name="escolha_uma_opcao">Escolha uma opção</string>
+    <string name="artista_solo">Artista solo</string>
+    <string name="banda">Banda</string>
+    <string name="quais_generos_musicais">Quais gêneros musicais?</string>
+    <string name="rock">Rock</string>
+    <string name="pop">Pop</string>
+    <string name="musica_classica">Música clássica</string>
+    <string name="digite_o_nome_do_artista">Digite o nome do artista</string>
+    <string name="eletronica">Eletrônica</string>
+    <string name="jazz">Jazz</string>
+    <string name="selecione_o_pais">Selecione o país:</string>
+    <string name="limpar_campos">Limpar campos</string>
+    <string name="salvar">Salvar</string>
+</resources>

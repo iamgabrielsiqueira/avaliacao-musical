@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    tools:context=".MainActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+        <TextView
+            android:id="@+id/textViewTituloPagina"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:text="@string/cadastro_de_artista"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textViewNome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="32dp"
+            android:text="@string/nome"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewTituloPagina" />
+
+        <EditText
+            android:id="@+id/plainTextNome"
+            android:layout_width="380dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:autofillHints=""
+            android:ems="10"
+            android:inputType="text"
+            android:text="@string/digite_o_nome_do_artista"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/textViewNome"
+            app:layout_constraintTop_toBottomOf="@+id/textViewNome"
+            tools:ignore="LabelFor" />
+
+        <TextView
+            android:id="@+id/textViewTipoArtista"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/escolha_uma_opcao"
+            app:layout_constraintStart_toStartOf="@+id/plainTextNome"
+            app:layout_constraintTop_toBottomOf="@+id/plainTextNome" />
+
+        <RadioGroup
+            android:id="@+id/radioGroupTipoArtista"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            app:layout_constraintStart_toStartOf="@+id/textViewTipoArtista"
+            app:layout_constraintTop_toBottomOf="@+id/textViewTipoArtista">
+
+            <RadioButton
+                android:id="@+id/radioButtonSolo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/artista_solo" />
+
+            <RadioButton
+                android:id="@+id/radioButtonBanda"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/banda" />
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/textViewGenero"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/quais_generos_musicais"
+            app:layout_constraintStart_toStartOf="@+id/radioGroupTipoArtista"
+            app:layout_constraintTop_toBottomOf="@+id/radioGroupTipoArtista" />
+
+        <CheckBox
+            android:id="@+id/checkBoxRock"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:text="@string/rock"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewGenero" />
+
+        <CheckBox
+            android:id="@+id/checkBoxPop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/pop"
+            app:layout_constraintStart_toStartOf="@+id/checkBoxRock"
+            app:layout_constraintTop_toBottomOf="@+id/checkBoxRock" />
+
+        <CheckBox
+            android:id="@+id/checkBoxMusicaClassica"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/musica_classica"
+            app:layout_constraintStart_toStartOf="@+id/checkBoxPop"
+            app:layout_constraintTop_toBottomOf="@+id/checkBoxPop" />
+
+        <CheckBox
+            android:id="@+id/checkBoxEletronica"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/eletronica"
+            app:layout_constraintStart_toStartOf="@+id/checkBoxMusicaClassica"
+            app:layout_constraintTop_toBottomOf="@+id/checkBoxMusicaClassica" />
+
+        <CheckBox
+            android:id="@+id/checkBoxJazz"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/jazz"
+            app:layout_constraintStart_toStartOf="@+id/checkBoxEletronica"
+            app:layout_constraintTop_toBottomOf="@+id/checkBoxEletronica" />
+
+        <TextView
+            android:id="@+id/textViewPaisOrigem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:text="@string/selecione_o_pais"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/checkBoxJazz" />
+
+        <Spinner
+            android:id="@+id/spinnerPaisOrigem"
+            android:layout_width="370dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintStart_toStartOf="@+id/textViewPaisOrigem"
+            app:layout_constraintTop_toBottomOf="@+id/textViewPaisOrigem" />
+
+        <Button
+            android:id="@+id/buttonLimpar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            android:text="@string/limpar_campos"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/spinnerPaisOrigem" />
+
+        <Button
+            android:id="@+id/buttonSalvar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            android:text="@string/salvar"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/buttonLimpar"
+            app:layout_constraintTop_toBottomOf="@+id/spinnerPaisOrigem" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
