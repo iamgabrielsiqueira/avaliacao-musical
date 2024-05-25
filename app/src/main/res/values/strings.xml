@@ -16,4 +16,14 @@
     <string name="selecione_o_pais">Selecione o país:</string>
     <string name="limpar_campos">Limpar campos</string>
     <string name="salvar">Salvar</string>
+    <string name="campos_limpos">Campos limpos!</string>
+    <string name="brasil">Brasil</string>
+    <string name="argentina">Argentina</string>
+    <string name="estados_unidos">Estados Unidos</string>
+    <string name="espanha">Espanha</string>
+    <string name="suecia">Suécia</string>
+    <string name="preencha_o_campo_nome">Preencha o campo nome!</string>
+    <string name="selecione_um_tipo_de_artista">Selecione um tipo de artista!</string>
+    <string name="selecione_pelo_menos_um_genero_musical">Selecione pelo menos um gênero musical!</string>
+    <string name="artista_salvo_com_sucesso">Artista salvo com sucesso!</string>
 </resources>
