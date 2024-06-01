@@ -1,5 +1,6 @@
 package br.edu.utfpr.avaliacaomusical.classes;
 
 public enum TipoArtista {
-    SOLO, BANDA
+    SOLO, // Ordinal 0
+    BANDA // Ordinal 1
 }

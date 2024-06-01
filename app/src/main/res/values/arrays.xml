@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="albuns">
+        <item>@string/personal_protocol</item>
+        <item>@string/softmetal</item>
+        <item>@string/funk_generation</item>
+        <item>@string/perfect_picture</item>
+        <item>@string/brat</item>
+        <item>@string/generacion_de_cristal</item>
+        <item>@string/bb_angel</item>
+        <item>@string/priscilla</item>
+        <item>@string/heaven_knows</item>
+        <item>@string/heraldica</item>
+    </string-array>
+
+    <string-array name="datas_lancamentos">
+        <item>@string/data_23_junho_2023</item>
+        <item>@string/data_17_novembro_2022</item>
+        <item>@string/data_26_abril_2024</item>
+        <item>@string/data_6_outubro_2022</item>
+        <item>@string/data_7_junho_2024</item>
+        <item>@string/data_29_fevereiro_2024</item>
+        <item>@string/data_8_setembro_2023</item>
+        <item>@string/data_9_maio_2024</item>
+        <item>@string/data_10_novembro_2023</item>
+        <item>@string/data_28_marco_2024</item>
+    </string-array>
+
+    <string-array name="artistas">
+        <item>@string/nome_8485</item>
+        <item>@string/bronze_avery</item>
+        <item>@string/anitta</item>
+        <item>@string/hannah_diamond</item>
+        <item>@string/charli_xcx</item>
+        <item>@string/luna_ki</item>
+        <item>@string/tinashe</item>
+        <item>@string/priscilla</item>
+        <item>@string/pink_pantheress</item>
+        <item>@string/saramalacara</item>
+    </string-array>
+
+    <integer-array name="classificacoes">
+        <item>4</item>
+        <item>4</item>
+        <item>5</item>
+        <item>3</item>
+        <item>5</item>
+        <item>4</item>
+        <item>4</item>
+        <item>2</item>
+        <item>5</item>
+        <item>5</item>
+    </integer-array>
+</resources>
