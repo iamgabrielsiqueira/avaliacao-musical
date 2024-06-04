@@ -59,4 +59,10 @@
     <string name="saramalacara">Salamalacara</string>
     <string name="o_album">"O álbum "</string>
     <string name="foi_selecionado">" foi selecionado"</string>
+    <string name="sobre_este_app">Sobre este app</string>
+    <string name="autor">Autor: Gabriel Siqueira de Carvalho</string>
+    <string name="curso">Curso de Especialização em Tecnologia Java</string>
+    <string name="email">gabrielsiqueiracarvalho@alunos.utfpr.edu.br</string>
+    <string name="descricao">Aplicativo feito para avaliar álbuns musicais.</string>
+    <string name="logo_utfpr">Logo UTFPR</string>
 </resources>
