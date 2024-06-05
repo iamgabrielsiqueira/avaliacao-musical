@@ -65,4 +65,7 @@
     <string name="email">gabrielsiqueiracarvalho@alunos.utfpr.edu.br</string>
     <string name="descricao">Aplicativo feito para avaliar álbuns musicais.</string>
     <string name="logo_utfpr">Logo UTFPR</string>
+    <string name="avaliacoes">Avaliações</string>
+    <string name="adicionar">Adicionar</string>
+    <string name="sobre">Sobre</string>
 </resources>

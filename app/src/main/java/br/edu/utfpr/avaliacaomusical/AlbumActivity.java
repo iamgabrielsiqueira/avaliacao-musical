@@ -13,6 +13,7 @@ import androidx.core.view.WindowInsetsCompat;
 import java.util.ArrayList;
 import java.util.List;
 
+import br.edu.utfpr.avaliacaomusical.adapter.AlbumAdapter;
 import br.edu.utfpr.avaliacaomusical.classes.Album;
 
 public class AlbumActivity extends AppCompatActivity {
@@ -46,14 +47,14 @@ public class AlbumActivity extends AppCompatActivity {
     }
 
     private void populaLista() {
-        String[] nomesAlbuns = getResources().getStringArray(R.array.albuns);
+        /*String[] nomesAlbuns = getResources().getStringArray(R.array.albuns);
         String[] datasAlbuns = getResources().getStringArray(R.array.datas_lancamentos);
         String[] artistasAlbuns = getResources().getStringArray(R.array.artistas);
-        int[] classificacoesAlbuns = getResources().getIntArray(R.array.classificacoes);
+        int[] classificacoesAlbuns = getResources().getIntArray(R.array.classificacoes);*/
 
         List<Album> albuns = new ArrayList<>();
 
-        for (int i = 0; i < nomesAlbuns.length; i++) {
+        /*for (int i = 0; i < nomesAlbuns.length; i++) {
             String nome = nomesAlbuns[i];
             String dataLancamento = datasAlbuns[i];
             String artista = artistasAlbuns[i];
@@ -62,7 +63,7 @@ public class AlbumActivity extends AppCompatActivity {
             Album album = new Album(nome, dataLancamento, artista, classificacao);
 
             albuns.add(album);
-        }
+        }*/
 
         AlbumAdapter adapter = new AlbumAdapter(this, albuns);
 

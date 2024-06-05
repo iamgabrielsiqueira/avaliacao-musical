@@ -1,4 +1,4 @@
-package br.edu.utfpr.avaliacaomusical;
+package br.edu.utfpr.avaliacaomusical.adapter;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -10,6 +10,7 @@ import android.widget.TextView;
 
 import java.util.List;
 
+import br.edu.utfpr.avaliacaomusical.R;
 import br.edu.utfpr.avaliacaomusical.classes.Album;
 
 public class AlbumAdapter extends BaseAdapter {
