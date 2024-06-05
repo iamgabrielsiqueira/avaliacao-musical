@@ -1,5 +1,6 @@
 package br.edu.utfpr.avaliacaomusical;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.activity.EdgeToEdge;
@@ -20,5 +21,11 @@ public class SobreActivity extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+    }
+
+    public static void mostrarTelaSobre(AppCompatActivity activity) {
+        Intent intent = new Intent(activity, SobreActivity.class);
+
+        activity.startActivity(intent);
     }
 }

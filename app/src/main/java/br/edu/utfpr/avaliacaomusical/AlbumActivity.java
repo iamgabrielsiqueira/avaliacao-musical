@@ -1,6 +1,7 @@
 package br.edu.utfpr.avaliacaomusical;
 
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ListView;
 import android.widget.Toast;
 
@@ -68,5 +69,9 @@ public class AlbumActivity extends AppCompatActivity {
         AlbumAdapter adapter = new AlbumAdapter(this, albuns);
 
         listViewAlbuns.setAdapter(adapter);
+    }
+
+    public void abrirTelaSobre(View view) {
+        SobreActivity.mostrarTelaSobre(this);
     }
 }
