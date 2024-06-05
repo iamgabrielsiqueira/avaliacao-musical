@@ -1,11 +1,15 @@
 package br.edu.utfpr.avaliacaomusical;
 
+import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ListView;
 import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
+import androidx.activity.result.ActivityResultLauncher;
+import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
@@ -20,6 +24,10 @@ import br.edu.utfpr.avaliacaomusical.classes.Album;
 public class AlbumActivity extends AppCompatActivity {
 
     private ListView listViewAlbuns;
+
+    private List<Album> albuns;
+
+    private AlbumAdapter adapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -53,7 +61,7 @@ public class AlbumActivity extends AppCompatActivity {
         String[] artistasAlbuns = getResources().getStringArray(R.array.artistas);
         int[] classificacoesAlbuns = getResources().getIntArray(R.array.classificacoes);*/
 
-        List<Album> albuns = new ArrayList<>();
+        albuns = new ArrayList<>();
 
         /*for (int i = 0; i < nomesAlbuns.length; i++) {
             String nome = nomesAlbuns[i];
@@ -66,12 +74,42 @@ public class AlbumActivity extends AppCompatActivity {
             albuns.add(album);
         }*/
 
-        AlbumAdapter adapter = new AlbumAdapter(this, albuns);
+        adapter = new AlbumAdapter(this, albuns);
 
         listViewAlbuns.setAdapter(adapter);
     }
 
     public void abrirTelaSobre(View view) {
         SobreActivity.mostrarTelaSobre(this);
+    }
+
+    ActivityResultLauncher<Intent> launcherNovoAlbum = registerForActivityResult(
+            new ActivityResultContracts.StartActivityForResult(),
+            o -> {
+                if (o.getResultCode() == Activity.RESULT_OK) {
+                    Intent intent = o.getData();
+
+                    if (intent != null) {
+                        Bundle bundle = intent.getExtras();
+
+                        if (bundle != null) {
+                            String nomeAlbum = bundle.getString(CadastroAlbumActivity.NOME_ALBUM);
+                            String dataLancamento = bundle.getString(CadastroAlbumActivity.DATA_LANCAMENTO);
+                            String artista = bundle.getString(CadastroAlbumActivity.ARTISTA);
+                            int classificacao = bundle.getInt(CadastroAlbumActivity.CLASSIFICACAO);
+
+                            Album album = new Album(nomeAlbum, dataLancamento, artista, classificacao);
+
+                            albuns.add(album);
+
+                            adapter.notifyDataSetChanged();
+                        }
+                    }
+                }
+            }
+    );
+
+    public void abrirTelaCadastro(View view) {
+        CadastroAlbumActivity.novoAlbum(this, launcherNovoAlbum);
     }
 }

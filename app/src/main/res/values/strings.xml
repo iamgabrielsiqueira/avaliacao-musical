@@ -68,4 +68,9 @@
     <string name="avaliacoes">Avaliações</string>
     <string name="adicionar">Adicionar</string>
     <string name="sobre">Sobre</string>
+    <string name="avaliar">Avaliar</string>
+    <string name="nome_album">Nome do álbum</string>
+    <string name="data_lancamento">Data do lançamento</string>
+    <string name="artista">Artista</string>
+    <string name="preencha_todos_os_campos">Preencha todos os campos!</string>
 </resources>

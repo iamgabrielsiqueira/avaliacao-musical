@@ -13,6 +13,9 @@
         android:theme="@style/Theme.AvaliacaoMusical"
         tools:targetApi="31">
         <activity
+            android:name=".CadastroAlbumActivity"
+            android:exported="false" />
+        <activity
             android:name=".SobreActivity"
             android:exported="false" />
         <activity
