@@ -44,6 +44,8 @@ public class CadastroAlbumActivity extends AppCompatActivity {
         editTextDate = findViewById(R.id.editTextDate);
         editTextArtista = findViewById(R.id.editTextArtista);
         ratingBarAlbum = findViewById(R.id.ratingBarAlbum2);
+
+        setTitle("Adicionar album");
     }
 
     public static void novoAlbum(AppCompatActivity activity,

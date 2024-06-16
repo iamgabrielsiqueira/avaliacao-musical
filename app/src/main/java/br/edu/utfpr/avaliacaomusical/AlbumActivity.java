@@ -3,13 +3,15 @@ package br.edu.utfpr.avaliacaomusical;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.widget.ListView;
 import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.activity.result.ActivityResultLauncher;
 import androidx.activity.result.contract.ActivityResultContracts;
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
@@ -53,6 +55,8 @@ public class AlbumActivity extends AppCompatActivity {
         });
 
         populaLista();
+
+        setTitle("Avaliação Musical");
     }
 
     private void populaLista() {
@@ -79,9 +83,9 @@ public class AlbumActivity extends AppCompatActivity {
         listViewAlbuns.setAdapter(adapter);
     }
 
-    public void abrirTelaSobre(View view) {
+    /*public void abrirTelaSobre(View view) {
         SobreActivity.mostrarTelaSobre(this);
-    }
+    }*/
 
     ActivityResultLauncher<Intent> launcherNovoAlbum = registerForActivityResult(
             new ActivityResultContracts.StartActivityForResult(),
@@ -109,7 +113,29 @@ public class AlbumActivity extends AppCompatActivity {
             }
     );
 
-    public void abrirTelaCadastro(View view) {
+    /*public void abrirTelaCadastro(View view) {
         CadastroAlbumActivity.novoAlbum(this, launcherNovoAlbum);
+    }*/
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu_principal, menu);
+
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        int idMenuItem = item.getItemId();
+
+        if (idMenuItem == R.id.menuItemAdicionar) {
+            CadastroAlbumActivity.novoAlbum(this, launcherNovoAlbum);
+        } else if (idMenuItem == R.id.menuItemSobre) {
+            SobreActivity.mostrarTelaSobre(this);
+        } else {
+            return super.onOptionsItemSelected(item);
+        }
+
+        return true;
     }
 }

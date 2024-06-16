@@ -21,6 +21,8 @@ public class SobreActivity extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+
+        setTitle("Sobre");
     }
 
     public static void mostrarTelaSobre(AppCompatActivity activity) {

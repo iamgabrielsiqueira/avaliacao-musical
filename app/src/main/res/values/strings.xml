@@ -73,4 +73,6 @@
     <string name="data_lancamento">Data do lançamento</string>
     <string name="artista">Artista</string>
     <string name="preencha_todos_os_campos">Preencha todos os campos!</string>
+    <string name="editar">Editar</string>
+    <string name="excluir">Excluir</string>
 </resources>
